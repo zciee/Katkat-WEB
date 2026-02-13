@@ -1482,8 +1482,6 @@ body {
     transform: translateY(-50%) translateX(0);
   }
 }
-/* ========== NEW CSS CODE STARTS HERE ========== */
-
 /* Reveal Button Styles */
 .reveal-button {
   position: fixed;
@@ -1622,10 +1620,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  max-height: 80vh;
+  width: 90vw;
+  max-width: 700px;
+  height: auto;
+  max-height: 85vh;
   background: linear-gradient(135deg, #fff9f9, #fff0f0);
-  padding: 40px;
+  padding: 3vh 4vw;
   border-radius: 15px;
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.3),
@@ -1635,6 +1635,9 @@ body {
   pointer-events: none;
   overflow-y: auto;
   font-family: 'Georgia', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .love-note.show {
@@ -1654,32 +1657,48 @@ body {
 
 .love-note p {
   color: #333;
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  font-size: clamp(12px, 2.2vmin, 16px);
+  line-height: 1.5;
+  margin-bottom: 1.5vh;
   text-align: left;
 }
 
 .love-note p:first-child {
-  font-size: 24px;
+  font-size: clamp(16px, 3.5vmin, 22px);
   font-weight: bold;
   color: #ff1493;
-  margin-bottom: 25px;
+  margin-bottom: 2vh;
 }
 
 .love-note .signature {
   text-align: right;
   font-style: italic;
   color: #ff69b4;
-  font-size: 20px;
-  margin-top: 30px;
+  font-size: clamp(14px, 2.8vmin, 18px);
+  margin-top: 2vh;
   margin-bottom: 0;
 }
 
-/* ========== NEW CSS CODE ENDS HERE ========== */
-
-
-
-
-
-
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .love-note {
+    width: 95vw;
+    padding: 2.5vh 5vw;
+  }
+  
+  .love-note p {
+    font-size: clamp(11px, 2.5vmin, 14px);
+    line-height: 1.4;
+    margin-bottom: 1.2vh;
+  }
+  
+  .love-note p:first-child {
+    font-size: clamp(15px, 4vmin, 20px);
+    margin-bottom: 1.5vh;
+  }
+  
+  .love-note .signature {
+    font-size: clamp(13px, 3.2vmin, 16px);
+    margin-top: 1.5vh;
+  }
+}
