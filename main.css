@@ -1482,6 +1482,8 @@ body {
     transform: translateY(-50%) translateX(0);
   }
 }
+/* ========== NEW CSS CODE STARTS HERE ========== */
+
 /* Reveal Button Styles */
 .reveal-button {
   position: fixed;
@@ -1702,3 +1704,5 @@ body {
     margin-top: 1.5vh;
   }
 }
+
+/* ========== NEW CSS CODE ENDS HERE ========== */
