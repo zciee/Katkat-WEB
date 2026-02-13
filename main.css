@@ -1336,6 +1336,17 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+/* Allow button and envelope animations to play */
+.reveal-button,
+.envelope-container,
+.envelope-container *,
+.love-note,
+.valentine-text,
+.right-message,
+.left-message {
+  -webkit-animation-play-state: running !important;
+          animation-play-state: running !important;
+}
 /* Valentine's Day Message */
 .valentine-text {
   position: fixed;
@@ -1666,6 +1677,7 @@ body {
 }
 
 /* ========== NEW CSS CODE ENDS HERE ========== */
+
 
 
 
