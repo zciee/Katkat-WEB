@@ -331,6 +331,77 @@
     <audio controls autoplay src="1 Minute of CALMING FLOWERS  Music Video - Relaxing Music.mp3"></audio>
     
     <script src="main.js"></script>
+    <!-- ========== NEW JAVASCRIPT CODE STARTS HERE ========== -->
+    <script>
+      // Use setTimeout to ensure DOM is ready
+      setTimeout(function() {
+        console.log('Setting up button...');
+        
+        var button = document.getElementById('revealButton');
+        console.log('Button element:', button);
+        
+        if (!button) {
+          console.log('ERROR: Button not found!');
+          return;
+        }
+        
+        // Test if button is clickable
+        button.onclick = function() {
+          alert('Button works! Starting animation...');
+          console.log('Button clicked!');
+          
+          // Fade out the button itself
+          this.style.transition = 'opacity 1s';
+          this.style.opacity = '0';
+          this.style.pointerEvents = 'none';
+          
+          // Fade out the existing messages
+          var valentineText = document.querySelector('.valentine-text');
+          var rightMessage = document.querySelector('.right-message');
+          var leftMessage = document.querySelector('.left-message');
+          
+          console.log('Found elements:', valentineText, rightMessage, leftMessage);
+          
+          if (valentineText) {
+            valentineText.style.transition = 'opacity 1s';
+            valentineText.style.opacity = '0';
+          }
+          
+          if (rightMessage) {
+            rightMessage.style.transition = 'opacity 1s';
+            rightMessage.style.opacity = '0';
+          }
+          
+          if (leftMessage) {
+            leftMessage.style.transition = 'opacity 1s';
+            leftMessage.style.opacity = '0';
+          }
+          
+          // Show envelope container after messages fade
+          setTimeout(function() {
+            var envelope = document.getElementById('envelopeContainer');
+            console.log('Showing envelope:', envelope);
+            if (envelope) {
+              envelope.classList.add('show');
+              envelope.style.display = 'block';
+            }
+          }, 1000);
+          
+          // Show the love note after envelope animation
+          setTimeout(function() {
+            var note = document.getElementById('loveNote');
+            console.log('Showing note:', note);
+            if (note) {
+              note.classList.add('show');
+            }
+          }, 3000);
+        };
+        
+        console.log('Button click handler attached successfully!');
+      }, 100);
+    </script>
+    <!-- ========== NEW JAVASCRIPT CODE ENDS HERE ========== -->
   </body>
 </html>
+
 
